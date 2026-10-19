@@ -1,0 +1,15 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+appsettings.Development.json
+*.db
+*.db-shm
+*.db-wal
+.editorconfig
+PBKK.sln
+README.md
+01-CSharpDasar/
+.vscode/

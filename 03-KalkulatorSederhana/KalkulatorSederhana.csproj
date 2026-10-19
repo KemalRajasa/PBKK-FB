@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- WinExe = aplikasi GUI (tidak membuka jendela console). -->
+    <OutputType>WinExe</OutputType>
+    <!-- Windows Forms hanya ada di .NET untuk Windows, maka akhiran -windows. -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>KalkulatorSederhana</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
