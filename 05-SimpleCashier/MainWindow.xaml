@@ -1,0 +1,96 @@
+<Window x:Class="StudentRegistrationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simple Cashier"
+        Height="650"
+        Width="900"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="1.3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- INPUT & PEMBAYARAN -->
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="SIMPLE CASHIER"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"/>
+
+            <TextBlock Text="Produk"/>
+            <ComboBox x:Name="cmbProduk"
+                      Height="35"
+                      Margin="0,5,0,15"
+                      DisplayMemberPath="Label"/>
+
+            <TextBlock Text="Jumlah"/>
+            <TextBox x:Name="txtJumlah"
+                     Height="35"
+                     Text="1"
+                     Margin="0,5,0,15"/>
+
+            <Button Content="Tambah ke Keranjang"
+                    Width="200"
+                    Height="40"
+                    HorizontalAlignment="Left"
+                    Margin="0,0,0,25"
+                    Click="BtnTambah_Click"/>
+
+            <TextBlock Text="Metode Pembayaran"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,5,0,15">
+                <RadioButton x:Name="rbTunai"
+                             Content="Tunai"
+                             Margin="0,0,20,0"
+                             Checked="RbTunai_Checked"/>
+                <RadioButton x:Name="rbQris"
+                             Content="QRIS"
+                             Checked="RbQris_Checked"/>
+            </StackPanel>
+
+            <TextBlock Text="Uang Dibayar (khusus Tunai)"/>
+            <TextBox x:Name="txtBayar"
+                     Height="35"
+                     Margin="0,5,0,20"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Bayar"
+                        Width="120"
+                        Height="40"
+                        Margin="0,0,10,0"
+                        Click="BtnBayar_Click"/>
+                <Button Content="Reset"
+                        Width="120"
+                        Height="40"
+                        Click="BtnReset_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- KERANJANG -->
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="KERANJANG"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"/>
+
+            <ListBox x:Name="lstKeranjang"
+                     Height="320"/>
+
+            <TextBlock x:Name="lblTotal"
+                       Text="Total: Rp 0"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0,15,0,0"/>
+
+            <Button Content="Hapus Item"
+                    Width="120"
+                    Height="40"
+                    Margin="0,15,0,0"
+                    HorizontalAlignment="Left"
+                    Click="BtnHapus_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
